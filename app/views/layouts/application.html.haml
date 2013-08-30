@@ -1,9 +1,16 @@
 %html
   %head
-    %title Outsidekick
+    %title Outsidekick | Personal Outside Safety
+    %meta{ :name => "description", :content => "TODO1 fill in from meta.yml" }
+    %meta{ :name => "keywords", :content => "TODO1 fill in from meta.yml" }
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
+    %header
+      = link_to "Home", "/"
+      = link_to "About", "/about" 
+      = link_to "Contact Us", "/contact_us"
+      = link_to "Privacy Policy", "/privacy_policy"
     = yield
 
