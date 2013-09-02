@@ -1,6 +1,8 @@
 Outsidekick::Application.routes.draw do
 
-  root 'early_users#index'
+  resources :early_users
+
+  root 'early_users#create'
 
   ["terms", "privacy_policy", "contact_us", "about"].each do |page|
     get page => "pages##{page}", :as => page
