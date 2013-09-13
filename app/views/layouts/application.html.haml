@@ -1,16 +1,26 @@
 %html
   %head
     %title Outsidekick | Personal Outside Safety
+    %meta{ :charset => "utf-8" }
     %meta{ :name => "description", :content => "TODO1 fill in from meta.yml" }
     %meta{ :name => "keywords", :content => "TODO1 fill in from meta.yml" }
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-  %body
-    %header
-      = link_to "Home", "/"
-      = link_to "About", "/about" 
-      = link_to "Contact Us", "/contact_us"
-      = link_to "Privacy Policy", "/privacy_policy"
-    = yield
+  %body#dark-background
+    .container
+      #outer_layout
+        #wrapper
+          #inner_wrapper
+            .navbar
+              .navbar-inner
+                .container
+                  %ul.nav
+                    %li= link_to "Home", "/"
+                    %li= link_to "About", "/about" 
+                    %li= link_to "Contact", "/contact_us"
+                    %li= link_to "Privacy Policy", "/privacy_policy"
+            .hero-unit
+              = yield
+
 
