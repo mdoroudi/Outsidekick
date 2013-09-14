@@ -15,6 +15,8 @@
             .navbar
               .navbar-inner
                 .container
+                  #logo
+                    =link_to(image_tag("outsidekick_logo.png"), "/")
                   %ul.nav
                     %li= link_to "Home", "/"
                     %li= link_to "About", "/about" 
@@ -22,5 +24,6 @@
                     %li= link_to "Privacy Policy", "/privacy_policy"
             .hero-unit
               = yield
+
 
 
