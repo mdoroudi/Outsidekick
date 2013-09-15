@@ -1,4 +1,8 @@
 @import "bootstrap"
+
+body
+  font-family: ProximaNova, Arial, sans-serif
+
 #dark-background
   background-color: #868686
   
@@ -17,15 +21,23 @@
         background: white
         box-shadow: 0px 0px 50px rgba(0,0,0,0.5)
         .navbar
+          border-bottom: 1px solid #c8c8c8
+          box-shadow: 0px 0px 5px rgba(0,0,0,0.25)
           margin-bottom: 0px
           #logo
             img
               float: left
-              width: 130px
+              width: 160px
           .nav
             float: right
+            padding-top: 5px
 .welcome-box
   color: white
+  .welcome
+    font-size: 30px
+
+input[type="submit"]
+  background: blue
     
 .hero-unit
   background-image: url("#{running_path}.jpg")
@@ -35,3 +47,24 @@
   -moz-border-radius: 0px
   -webkit-border-radius: 0px
   -webkit-border-radius: 0px
+  label
+    float: left
+    padding-right: 10px
+  input
+    background-color: #e9e9e9
+    border: none
+    color: #525252
+    display: block
+    float: left
+    font-family: "AvenirNextLTW02-Regular", "Helvetica", "Arial", "sans-serif"
+    font-size: 18px
+    font-weight: 300
+    line-height: 41px
+    padding: 0 10px 0 10px
+    height: 39px
+    width: 221px
+    margin-right: 10px
+
+form
+  .btn-large
+    padding: 9px

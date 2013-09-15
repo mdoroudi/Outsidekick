@@ -7,7 +7,6 @@
           %li= msg
 
   .field
-    = f.label :email
-    = f.text_field :email
-  .actions.btn.btn-info
-    = f.submit 'Submit'
+    = f.text_field :email, placeholder: 'Your email'
+  .actions
+    = f.button 'Submit', type: 'submit', class: 'btn btn-warning btn-large'
