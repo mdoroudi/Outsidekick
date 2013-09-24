@@ -1,5 +1,12 @@
 @import "bootstrap"
 
+@mixin main_sections
+  padding-top: 75px
+  margin: 0 auto
+  color: white
+  padding: 100px
+  border-bottom: 1px solid #c8c8c8
+
 body
   font-family: ProximaNova, Arial, sans-serif
 
@@ -47,6 +54,14 @@ body
     text-align: center
   .welcome-message
     width: 284px
+
+#inner_wrapper
+  .video
+    @include main_sections
+  .about
+    @include main_sections
+  .photo
+    @include main_sections
 
 input[type="submit"]
   background: blue

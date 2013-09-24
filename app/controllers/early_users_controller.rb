@@ -11,9 +11,10 @@ class EarlyUsersController < ApplicationController
       @early_user.email = params["early_user"]["email"]
       @early_user.save!
     end
-    redirect_to "new"
-  rescue 
+    redirect_to "/"
+  rescue ActiveRecord::RecordInvalid => e
     #TODO show errors
-    redirect_to "new"
+    redirect_to "/"
+  rescue => e
   end
 end
