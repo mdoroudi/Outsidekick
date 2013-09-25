@@ -8,7 +8,8 @@
   border-bottom: 1px solid #c8c8c8
 
 body
-  font-family: ProximaNova, Arial, sans-serif
+  font-family: "AvenirNextLTW02-Regular", "Helvetica", "Arial", "sans-serif"
+
 
 #dark-background
   background-color: #868686
@@ -58,8 +59,31 @@ body
 #inner_wrapper
   .video
     @include main_sections
+    .video_wrapper
+      width: 800px
+      float: center
+      margin: 0 auto
   .about
     @include main_sections
+    color: #757777
+    background: rgb(190, 245, 255)
+    span.outside
+      color: #39C44A
+    span.sidekick
+      color: #f89406
+    .details
+      font-size: 18px
+    .about-wrapper
+      width: 800px
+      float: center
+      margin: 0 auto
+      padding: 33px
+      background: white
+      border-radius: 10px
+      -moz-border-radius: 10px
+      -webkit-border-radius: 10px
+      -webkit-border-radius: 10px
+    
   .photo
     @include main_sections
 
@@ -95,3 +119,4 @@ input[type="submit"]
 form
   .btn-large
     padding: 9px
+
