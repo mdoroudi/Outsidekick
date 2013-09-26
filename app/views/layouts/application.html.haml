@@ -14,14 +14,7 @@
         #wrapper
           #inner_wrapper
             = render partial: 'navbar'
-            .hero-unit
-              = yield
-            %section.video
-              = render partial: 'welcome_video' 
-            %section.about
-              = render partial: 'about_outsidekick'
-            %section.photo
-              = render partial: 'third_photo'
+            = yield
 
 
 
