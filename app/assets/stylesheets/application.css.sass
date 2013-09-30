@@ -7,9 +7,23 @@
   padding: 100px
   border-bottom: 1px solid #c8c8c8
 
-body
-  font-family: "AvenirNextLTW02-Regular", "Helvetica", "Arial", "sans-serif"
+@mixin border-rad($size)
+  border-radius: $size
+  -moz-border-radius: $size
+  -webkit-border-radius: $size
+  -webkit-border-radius: $size
 
+@mixin font_family
+  font-family: 'Oxygen', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'
+  color: #454545
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen)
+  
+
+  
+
+body
+  @include font_family
 
 #dark-background
   background-color: #868686
@@ -46,15 +60,13 @@ body
   color: white
   background: rgba(126, 126, 126, 0.2)
   padding: 100px
-  border-radius: 25px
-  -moz-border-radius: 25px
-  -webkit-border-radius: 25px
-  -webkit-border-radius: 25px
+  @include border-rad(25px)
   .head
-    font-size: 30px
+    font-size: 40px
     text-align: center
   .welcome-message
     width: 284px
+
 
 #inner_wrapper
   .video
@@ -79,10 +91,7 @@ body
       margin: 0 auto
       padding: 33px
       background: white
-      border-radius: 10px
-      -moz-border-radius: 10px
-      -webkit-border-radius: 10px
-      -webkit-border-radius: 10px
+      @include border-rad(10px)
     
   .photo
     @include main_sections
@@ -93,11 +102,8 @@ input[type="submit"]
 .hero-unit
   background-image: url("#{running_path}.jpg")
   background-repeat: no-repeat
-  height: 455px
-  border-radius: 0px
-  -moz-border-radius: 0px
-  -webkit-border-radius: 0px
-  -webkit-border-radius: 0px
+  height: 460px
+  @include border-rad(0px)
   label
     float: left
     padding-right: 10px
@@ -107,7 +113,7 @@ input[type="submit"]
     color: #525252
     display: block
     float: left
-    font-family: "AvenirNextLTW02-Regular", "Helvetica", "Arial", "sans-serif"
+    @include font_family
     font-size: 18px
     font-weight: 300
     line-height: 41px
@@ -119,4 +125,18 @@ input[type="submit"]
 form
   .btn-large
     padding: 9px
+
+.photo
+  padding: 0px !important
+  .third-photo
+    background-image: url("#{jtree_outsidekick}.jpg")
+    background-repeat: no-repeat
+    height: 810px
+    @include border-rad(0px)
+#about-page-wrapper
+  width: 800px
+  margin: 0 auto
+  float: center
+  padding-top: 10px
+  padding-bottom: 100px
 
