@@ -8,6 +8,8 @@ Outsidekick::Application.routes.draw do
     get page => "pages##{page}", :as => page
   end
   
+  post '/submit_contact' => 'mailer_controller#deliver_contact_form'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -133,10 +133,19 @@ form
     background-repeat: no-repeat
     height: 810px
     @include border-rad(0px)
-#about-page-wrapper
+
+@mixin small_pages
   width: 800px
   margin: 0 auto
   float: center
-  padding-top: 10px
+  padding-top: 40px
   padding-bottom: 100px
+#about-page-wrapper 
+  @include small_pages
+#contact-us-page-wrapper
+  @include small_pages
+
+
+.page-body
+  height: 100%
 
