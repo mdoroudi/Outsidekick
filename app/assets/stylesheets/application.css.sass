@@ -46,13 +46,15 @@ body
           border-bottom: 1px solid #c8c8c8
           box-shadow: 0px 0px 5px rgba(0,0,0,0.25)
           margin-bottom: 0px
-          #logo
-            img
-              float: left
-              width: 160px
-          .nav
-            float: right
-            padding-top: 5px
+          .navbar-inner
+            border: 0px
+            #logo
+              img
+                float: left
+                width: 160px
+            .nav
+              float: right
+              padding-top: 5px
 .welcome-box
   padding-top: 75px
   width: 350px
@@ -102,7 +104,7 @@ input[type="submit"]
 .hero-unit
   background-image: url("#{running_path}.jpg")
   background-repeat: no-repeat
-  height: 460px
+  height: 500px
   @include border-rad(0px)
   label
     float: left
@@ -142,9 +144,19 @@ form
   padding-bottom: 100px
 #about-page-wrapper 
   @include small_pages
+  h4.you
+    padding-top: 30px
 #contact-us-page-wrapper
   @include small_pages
-
+  #contact_email
+    height: 30px  
+    width: 300px
+    font-size: 18px
+  #contact_detail
+    width: 500px
+    font-size: 18px
+#privacy-policy-page-wrapper
+  @include small_pages
 
 .page-body
   height: 100%
